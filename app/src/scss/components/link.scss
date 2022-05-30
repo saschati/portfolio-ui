@@ -1,0 +1,16 @@
+@use '../core/functions' as f;
+
+.link {
+  color: f.v(link-color, #{f.color(black)});
+  font-size: f.v(link-text-size, #{f.size(nx2)});
+
+  &_type {
+    &--active {
+      --link-color: #{f.color(primary)};
+    }
+  }
+
+  &:hover {
+    --link-color: #{f.color(primary)};
+  }
+}

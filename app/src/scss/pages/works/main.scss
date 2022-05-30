@@ -1,0 +1,51 @@
+@use '../../core/page' as page;
+@use '../../core/mixin' as m;
+@use '../../core/functions' as f;
+@use '../../core/screen' as screen;
+
+.works-page {
+  @include page.style;
+
+  &__container {
+    width: 856px;
+
+    margin: 90px auto 58px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+
+    @include m.text($size: f.size(mx3), $lh: f.lh(36px), $w: 700);
+  }
+
+  &__works {
+    @include m.flex(column);
+  }
+
+  &__works-item {
+    padding-bottom: 47px;
+
+    @include m.relative(41px, top);
+  }
+
+  //ADAPTIVE
+  @include screen.mobile {
+    &__container {
+      width: 100%;
+
+      margin: 24px auto 0;
+    }
+
+    &__title {
+      margin: 0 18px 13px;
+
+      @include m.text(f.size(nx6));
+    }
+
+    &__works-item {
+      padding-bottom: 17px;
+
+      @include m.relative(22px, top);
+    }
+  }
+}

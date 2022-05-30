@@ -1,0 +1,24 @@
+@use "../../common/bootstrap";
+
+// COMPONENTS
+@use "../../components/link";
+@use "../../components/social-networks";
+@use "../../components/btn";
+@use "../../components/mark";
+@use "../../components/post-item";
+@use "../../components/work-item";
+
+// MIXED
+@use "../../mixed/grid";
+@use "../../mixed/bg";
+@use "../../mixed/state";
+
+// BLOCKS
+@use "../../blocks/footer";
+@use "../../blocks/header";
+
+// THIS
+@use "./blocks/greeting";
+@use "./blocks/posts";
+@use "./blocks/works";
+@use "main";

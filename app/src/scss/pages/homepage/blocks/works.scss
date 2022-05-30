@@ -1,0 +1,36 @@
+@use '../../../core/mixin' as m;
+@use '../../../core/functions' as f;
+@use '../../../core/screen' as screen;
+
+.works {
+  padding-block: 15px 83px;
+
+  &__header {
+    @include m.flex(row, $ai: center);
+
+    margin-bottom: 22px;
+  }
+
+  &__title {
+    @include m.text(f.size(nx3), $lh: f.lh(34px));
+  }
+
+  &__items {
+    @include m.flex(column);
+  }
+
+  // ADAPTIVE
+  @include screen.mobile {
+    padding-block: 3px 150px;
+
+    &__header {
+      @include m.flex(row, center, center);
+
+      margin-bottom: 2px;
+    }
+
+    &__title {
+      @include m.text(f.size(nx1));
+    }
+  }
+}

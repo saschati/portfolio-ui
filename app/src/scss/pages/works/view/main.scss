@@ -1,0 +1,40 @@
+@use '../../../core/page' as page;
+@use '../../../core/mixin' as m;
+@use '../../../core/screen' as screen;
+
+.works-view {
+  @include page.style;
+
+  &__container {
+    width: 856px;
+
+    margin: 78px auto 27px;
+  }
+
+  &__post {
+    width: 681px;
+
+    margin: 0 auto;
+
+    @include m.relative(54px, top);
+  }
+
+  //ADAPTIVE
+  @include screen.mobile {
+    &__container {
+      width: 100%;
+
+      padding-inline: 18px;
+
+      margin: 32px auto 0;
+    }
+
+    &__post {
+      width: 100%;
+
+      margin: 0;
+
+      @include m.relative(23px, top);
+    }
+  }
+}

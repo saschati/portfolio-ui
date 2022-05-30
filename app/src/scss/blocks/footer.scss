@@ -1,0 +1,16 @@
+@use '../core/mixin' as m;
+@use '../core/functions' as f;
+
+.footer {
+  @include m.flex(column, flex-end, center);
+
+  &__social-network {
+    margin-bottom: 26px;
+  }
+
+  &__copyright {
+    @include m.text(f.size(sx1), $lh: f.lh(-3px));
+
+    margin-bottom: 54px;
+  }
+}

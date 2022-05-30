@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= _.template(require('./../inc/head.html').default)() %>
+</head>
+<body class="page works-page">
+    <%= _.template(require('./../inc/header.html').default)() %>
+
+    <main class="works-page__container page__area-content">
+        <h1 class="works-page__title">Work</h1>
+        <div class="works-page__works">
+            <div class="work-item works-page__works-item">
+                <img class="work-item__img" src="<%= require('../../img/work-1.png') %>" alt="Work">
+                <div class="work-item__content">
+                    <a href="./works-view.html" class="work-item__title link">Designing Dashboards</a>
+                    <span class="work-item__year mark">2020</span>
+                    <span class="work-item__label">Dashboard</span>
+                    <p>
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+            </div>
+            <div class="work-item works-page__works-item">
+                <img class="work-item__img" src="<%= require('../../img/work-2.png') %>" alt="Work">
+                <div class="work-item__content">
+                    <a href="./works-view.html" class="work-item__title link">Vibrant Portraits of 2020</a>
+                    <span class="work-item__year mark">2018</span>
+                    <span class="work-item__label">Illustration</span>
+                    <p>
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+            </div>
+            <div class="work-item works-page__works-item">
+                <img class="work-item__img" src="<%= require('../../img/work-3.png') %>" alt="Work">
+                <div class="work-item__content">
+                    <a href="./works-view.html" class="work-item__title link">36 Days of Malayalam type</a>
+                    <span class="work-item__year mark">2018</span>
+                    <span class="work-item__label">Typography</span>
+                    <p>
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+            </div>
+            <div class="work-item works-page__works-item">
+                <img class="work-item__img" src="<%= require('../../img/work-4.png') %>" alt="Work">
+                <div class="work-item__content">
+                    <a href="./works-view.html" class="work-item__title link">Components</a>
+                    <span class="work-item__year mark">2018</span>
+                    <span class="work-item__label">Components, Design</span>
+                    <p>
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%= _.template(require('./../inc/footer.html').default)() %>
+</body>
+</html>

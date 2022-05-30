@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= _.template(require('./../inc/head.html').default)() %>
+</head>
+<body class="page homepage">
+    <%= _.template(require('./../inc/header.html').default)() %>
+
+    <main class="homepage__container page__area-content grid">
+        <div class="greeting homepage__greeting grid__area" style="--grid-area: greeting">
+            <div class="greeting__info">
+                <h1 class="greeting__title">
+                    Hi, I am John, <br>
+                    Creative Technologist
+                </h1>
+                <p class="greeting__description">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                </p>
+                <button class="btn btn_color_primary">Download Resume</button>
+            </div>
+            <div class="greeting__avatar" style="background-image: url('<%= require('./../../img/avatar.png') %>')"></div>
+        </div>
+        <div class="grid__area posts bg bg_color_water" style="--grid-area: posts">
+            <div class="posts__wrapper">
+                <div class="posts__header">
+                    <h6 class="posts__title">Recent posts</h6>
+                    <a class="link posts__view-all" href="./blog.html">View all</a>
+                </div>
+                <div class="posts__items">
+                    <div class="posts__item post-item">
+                        <h4 class="post-item__title">Making a design system from scratch</h4>
+                        <span class="post-item__date">12 Feb 2020</span>
+                        <span class="post-item__author">Design, Pattern</span>
+                        <p>
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                        </p>
+                    </div>
+                    <div class="posts__item post-item">
+                        <h4 class="post-item__title">Creating pixel perfect icons in Figma</h4>
+                        <span class="post-item__date">12 Feb 2020</span>
+                        <span class="post-item__author">Figma, Icon Design</span>
+                        <p>
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid__area works" style="--grid-area: works">
+            <div class="works__header">
+                <h6 class="works__title">Featured works</h6>
+            </div>
+            <div class="works__items">
+                <div class="work-item">
+                    <img class="work-item__img" src="<%= require('../../img/work-1.png') %>" alt="Work">
+                    <div class="work-item__content">
+                        <a href="./works-view.html" class="work-item__title link">Designing Dashboards</a>
+                        <span class="work-item__year mark">2020</span>
+                        <span class="work-item__label">Dashboard</span>
+                        <p>
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                        </p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <img class="work-item__img" src="<%= require('../../img/work-2.png') %>" alt="Work">
+                    <div class="work-item__content">
+                        <a href="./works-view.html" class="work-item__title link">Vibrant Portraits of 2020</a>
+                        <span class="work-item__year mark">2018</span>
+                        <span class="work-item__label">Illustration</span>
+                        <p>
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                        </p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <img class="work-item__img" src="<%= require('../../img/work-3.png') %>" alt="Work">
+                    <div class="work-item__content">
+                        <a href="./works-view.html" class="work-item__title link">36 Days of Malayalam type</a>
+                        <span class="work-item__year mark">2018</span>
+                        <span class="work-item__label">Typography</span>
+                        <p>
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%= _.template(require('./../inc/footer.html').default)() %>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= _.template(require('./../inc/head.html').default)() %>
+</head>
+<body class="page blog">
+    <%= _.template(require('./../inc/header.html').default)() %>
+
+    <main class="blog__container page__area-content">
+        <h1 class="blog__title">Blog</h1>
+        <div>
+            <div class="blog__item post-item">
+                <h4 class="post-item__title blog__item-title">UI Interactions of the week</h4>
+                <span class="post-item__date blog__item-date">12 Feb 2019</span>
+                <span class="post-item__author blog__item-author">Express, Handlebars</span>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+            <div class="blog__item post-item">
+                <h4 class="post-item__title blog__item-title">UI Interactions of the week</h4>
+                <span class="post-item__date blog__item-date">12 Feb 2019</span>
+                <span class="post-item__author blog__item-author">Express, Handlebars</span>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+            <div class="blog__item post-item">
+                <h4 class="post-item__title blog__item-title">UI Interactions of the week</h4>
+                <span class="post-item__date blog__item-date">12 Feb 2019</span>
+                <span class="post-item__author blog__item-author">Express, Handlebars</span>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+            <div class="blog__item post-item">
+                <h4 class="post-item__title blog__item-title">UI Interactions of the week</h4>
+                <span class="post-item__date blog__item-date">12 Feb 2019</span>
+                <span class="post-item__author blog__item-author">Express, Handlebars</span>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+        </div>
+    </main>
+
+    <%= _.template(require('./../inc/footer.html').default)() %>
+</body>
+</html>

@@ -1,0 +1,94 @@
+@use '../../core/page' as page;
+@use '../../core/mixin' as m;
+@use '../../core/functions' as f;
+@use '../../core/screen' as screen;
+
+.blog {
+  @include page.style;
+
+  &__container {
+    width: 856px;
+
+    margin: 90px auto 53px;
+  }
+
+  &__title {
+    margin-bottom: 55px;
+
+    @include m.text($size: f.size(mx3), $lh: f.lh(36px), $w: 700);
+  }
+
+  &__item {
+    padding: 0 0 29px;
+
+    border-bottom: 1px solid f.color(light-gray);
+
+    &-title {
+      @include m.text(f.size(nx6), $lh: f.lh(20px), $w: 500);
+
+      margin-bottom: 16px;
+    }
+
+    &-date {
+      @include m.text(f.size(nx2), $lh: f.lh(5px));
+
+      margin-right: 20px;
+      margin-bottom: 15px;
+    }
+
+    &-author {
+      @include m.text(f.size(nx2), $c: f.color(light), $lh: f.lh(5px));
+    }
+
+    &-date + &-author {
+      padding-left: 20px;
+    }
+
+    @include m.relative(32px, top);
+  }
+
+  //ADAPTIVE
+  @include screen.mobile {
+    &__container {
+      width: 100%;
+
+      padding-left: 18px;
+      padding-right: 18px;
+
+      margin: 24px auto 57px;
+    }
+
+    &__title {
+      margin-bottom: 18px;
+
+      @include m.text(f.size(nx6));
+    }
+
+    &__item {
+      padding: 0 0 24px;
+
+      &-title {
+        @include m.text(f.size(nx5), $lh: f.lh(14px));
+
+        margin-bottom: 5px;
+      }
+
+      &-date {
+        @include m.text(f.size(), $lh: f.lh());
+
+        margin-right: 14px;
+        margin-bottom: 17px;
+      }
+
+      &-author {
+        @include m.text(f.size(), $lh: f.lh());
+      }
+
+      &-date + &-author {
+        padding-left: 15px;
+      }
+
+      @include m.relative(18px, top);
+    }
+  }
+}

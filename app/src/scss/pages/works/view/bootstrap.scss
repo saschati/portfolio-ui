@@ -1,0 +1,18 @@
+@use "../../../common/bootstrap";
+
+// COMPONENTS
+@use "../../../components/mark";
+@use "../../../components/link";
+@use "../../../components/social-networks";
+
+// MIXED
+@use "../../../mixed/grid";
+@use "../../../mixed/state";
+
+// BLOCKS
+@use "../../../blocks/footer";
+@use "../../../blocks/header";
+
+// THIS
+@use "./blocks/works-post";
+@use "main";

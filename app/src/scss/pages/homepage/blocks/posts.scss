@@ -1,0 +1,77 @@
+@use '../../../core/mixin' as m;
+@use '../../../core/functions' as f;
+@use '../../../core/screen' as screen;
+
+.posts {
+  padding-block: 7px 32px;
+
+  &__wrapper {
+    width: 856px;
+
+    margin: auto;
+  }
+
+  &__header {
+    @include m.flex(row wrap, $ai: center);
+
+    margin-bottom: 2px;
+  }
+
+  &__title {
+    @include m.text(f.size(nx3), $lh: f.lh(34px));
+  }
+
+  &__view-all {
+    --link-color: #{f.color(strong-cyan)};
+    --link-text-size: #{f.size(no)};
+
+    margin-left: auto;
+  }
+
+  &__items {
+    @include m.flex(row wrap);
+  }
+
+  &__item {
+    @include m.box(418px, 295px);
+
+    border-radius: 4px;
+    background-color: f.color(white);
+
+    @include m.relative(20px, left);
+  }
+
+  // ADAPTIVE
+  @include screen.mobile {
+    padding-block: 0 38px;
+
+    &__wrapper {
+      width: 100%;
+
+      margin: auto;
+    }
+
+    &__header {
+      @include m.flex(row, center, center);
+
+      margin-bottom: 0;
+
+      @include m.text(f.size(nx1));
+    }
+
+    &__view-all {
+      display: none;
+    }
+
+    &__items {
+      @include m.flex(column, $ai: center);
+    }
+
+    &__item {
+      @include m.box(354px, 266px);
+
+      @include m.relative(0, left);
+      @include m.relative(17px, top);
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@use '../../../../core/mixin' as m;
+@use '../../../../core/functions' as f;
+@use '../../../../core/screen' as screen;
+
+.works-post {
+  &__title {
+    width: 506px;
+
+    @include m.text($size: f.size(mx2), $lh: f.lh(26px), $w: 700);
+
+    &_size_small {
+      @include m.text($size: f.size(nx6), $lh: f.lh(36px), $w: 700);
+    }
+  }
+
+  &__subtitle {
+    @include m.text($size: f.size(nx4), $lh: f.lh(36px), $w: 700);
+  }
+
+  &__title + &__year {
+    margin-top: 32px;
+  }
+
+  &__year {
+    margin: 0 17px 30px 4px;
+
+    --mark-bg-color: #{f.color(very-light-red)};
+  }
+
+  &__author {
+    display: inline-block;
+
+    @include m.text($size: f.size(nx2), $lh: f.lh(5px));
+  }
+
+  &__description {
+    margin-bottom: 46px;
+  }
+
+  &__img {
+    @include m.box(681px, 460px);
+    @include m.relative(27px, top);
+  }
+
+  //ADAPTIVE
+  @include screen.mobile {
+    &__title {
+      width: 100%;
+
+      @include m.text(f.size(nx6), $lh: f.lh(16px));
+
+      &_size_small {
+        @include m.text(f.size(nx5), $lh: f.lh(36px));
+      }
+    }
+
+    &__subtitle {
+      @include m.text(f.size(nx2));
+    }
+
+    &__title + &__year {
+      margin-top: 24px;
+    }
+
+    &__year {
+      margin: 0 15px 50px 0;
+      vertical-align: top;
+    }
+
+    &__author {
+      width: 262px;
+      margin-top: 23px;
+
+      @include m.text(f.size(nx1), $lh: f.lh(2px));
+    }
+
+    &__description {
+      margin-bottom: 23px;
+    }
+
+    &__img {
+      @include m.box(100%, 100%);
+      @include m.relative(23px, top);
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@use '../core/mixin' as m;
+@use '../core/functions' as f;
+@use '../core/screen' as screen;
+
+.post-item {
+  padding: 24px 21px 7px 23px;
+
+  &__title {
+    @include m.text(f.size(nx5), $lh: f.lh(14px), $w: 700);
+
+    margin-bottom: 17px;
+  }
+
+  &__date {
+    display: inline-block;
+
+    margin-right: 28px;
+    margin-bottom: 11px;
+
+    @include m.text(f.size(nx1), $lh: f.lh(2px));
+  }
+
+  &__author {
+    display: inline-block;
+
+    @include m.text(f.size(nx1), $lh: f.lh(2px));
+  }
+
+  &__date + &__author {
+    border-left: 1px solid f.color(black);
+
+    padding-left: 28px;
+  }
+
+  @include screen.mobile {
+    padding: 12px 8px 22px 19px;
+
+    &__title {
+      @include m.text(f.size(nx3), $lh: f.lh(6px));
+
+      margin-bottom: 12px;
+    }
+
+    &__date {
+      margin-right: 24px;
+      margin-bottom: 19px;
+
+      @include m.text(f.size(), $lh: f.lh());
+    }
+
+    &__author {
+      @include m.text(f.size(), $lh: f.lh());
+    }
+
+    &__date + &__author {
+      padding-left: 24px;
+    }
+  }
+}

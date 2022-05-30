@@ -1,0 +1,84 @@
+@use '../core/mixin' as m;
+@use '../core/functions' as f;
+@use '../core/screen' as screen;
+
+.work-item {
+  @include m.flex(row wrap);
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid f.color(light-gray);
+
+  &__img {
+    margin-right: 18px;
+    margin-top: 11px;
+
+    @include m.box(246px, 180px);
+
+    border-radius: 6px;
+  }
+
+  &__content {
+    flex: 1 50%;
+  }
+
+  &__title {
+    display: block;
+
+    margin-bottom: 2px;
+
+    @include m.text(f.size(nx6), $lh: f.lh(20px), $w: 700);
+  }
+
+  &__year {
+    margin-bottom: 22px;
+    margin-top: 20px;
+  }
+
+  &__label {
+    @include m.text(f.size(nx1), $c: f.color(light), $lh: f.lh(5px));
+  }
+
+  &__year + &__label {
+    display: inline-block;
+
+    margin-left: 26px;
+  }
+
+  @include m.relative(31px, top);
+
+  // ADAPTIVE
+  @include screen.mobile {
+    @include m.flex(column, $ai: center);
+
+    padding-bottom: 17px;
+    padding-inline: 18px;
+
+    &__img {
+      margin-right: 0;
+      margin-top: 0;
+      margin-bottom: 17px;
+
+      @include m.square(100%);
+    }
+
+    &__title {
+      margin-bottom: 16px;
+
+      @include m.text(f.size(nx5), $lh: f.lh(6px));
+    }
+
+    &__year {
+      margin-bottom: 24px;
+      margin-top: 0;
+    }
+
+    &__label {
+      @include m.text(f.size(), $lh: f.lh());
+    }
+
+    &__year + &__label {
+      margin-left: 22px;
+    }
+  }
+}
